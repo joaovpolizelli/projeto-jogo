@@ -11,6 +11,9 @@ include "menu.php";
       <img src="img/dayz-image.jpg" class="d-block w-100" alt="...">
     </div>
     <div class="carousel-item">
+      <img src="img/bf2042-image.jpg" class="d-block w-100" alt="...">
+    </div>
+    <div class="carousel-item">
       <img src="img/ark-image(3).jpg" class="d-block w-100" alt="...">
     </div>
     <div class="carousel-item">
@@ -27,39 +30,31 @@ include "menu.php";
   </button>
 </div>
 
-<div class="container">
+<div class="container mt-5 mb-3">
   <div class="row">
     <div class="col-12 text-center"><h1>Jogos em destaque</h1></div>
-    <div class="col-12 text-center"><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ratione nam, sint itaque officiis vitae laboriosam voluptates necessitatibus! Doloribus, consectetur voluptate. Ad temporibus odit porro quam est, consequuntur ratione voluptatibus nulla.</p></div>
+    <div class="col-12  text-center mt-3 mb-3"><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ratione nam, sint itaque officiis vitae laboriosam voluptates necessitatibus! Doloribus, consectetur voluptate. Ad temporibus odit porro quam est, consequuntur ratione voluptatibus nulla.</p></div>
   </div>
-  
+
   <div class="row">
-    <div class="col-3 text-center">
+
+  <?php
+  for($i = 0; $i < 8 ; $i++):
+  ?>
+
+    <div class="col-md-3 text-center mb-4">
 <img src="img/dayz-image.jpg" class="img-fluid" >
-<h2>Nome do Jogo</h2>
-<a href="nomedojogo.php" class="btn btn-primary">VER MAIS!</a>
+<h5 class="mt-3 mb-3">Nome do Jogo</h5>
+<a href="nomedojogo.php" class="btn btn-outline-primary">VER MAIS!</a>
     </div>
+    <?php
+endfor;
+    ?>
 
-    <div class="col-3 text-center">
-<img src="img/ark-image(3).jpg" class="img-fluid">
-<h2>Nome do Jogo</h2>
-<a href="nomedojogo.php" class="btn btn-primary">VER MAIS!</a>
-    </div>
-
-    <div class="col-3 text-center">
-<img src="img/redDead-image.jpg" class="img-fluid">
-<h2>Nome do Jogo</h2>
-<a href="nomedojogo.php" class="btn btn-primary">VER MAIS!</a>
-    </div>
-
-    <div class="col-3 text-center">
-<img src="img/dayz-image.jpg" class="img-fluid">
-<h2>Nome do Jogo</h2>
-<a href="nomedojogo.php" class="btn btn-primary">VER MAIS!</a>
-    </div>
-
-
-
+  </div>
+  <div class="row">
+    <div class="col-12"><h2>Entre em contato</h2></div>
+    <div clas="col-12"><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi ipsum, quibusdam libero explicabo facere dolor ducimus perferendis fuga. Quo molestias aliquid aperiam dolores fugit error soluta illum consectetur facere labore.</p></div>
   </div>
 </div>
 
