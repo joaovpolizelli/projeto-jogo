@@ -39,17 +39,28 @@ include "menu.php";
   <div class="row">
 
   <?php
-  for($i = 0; $i < 8 ; $i++):
-  ?>
+  $servidor = "127.0.0.1";
+  $usuario_bd = "root";
+  $senha_bd = "";
+  $banco_de_dados = "delivery_jogos";
 
-    <div class="col-md-3 text-center mb-4">
-<img src="img/dayz-image.jpg" class="img-fluid" >
-<h5 class="mt-3 mb-3">Nome do Jogo</h5>
-<a href="nomedojogo.php" class="btn btn-outline-primary">VER MAIS!</a>
-    </div>
-    <?php
-endfor;
+  $conexao = mysqli_connect($servidor_bd, $usuario_bd, $senha_bd, $banco_de_dados);
+
+  $sql_buscar = "select * from jogo";
+
+  $todos_os_jogos = mysqli_query($conexao, $sql_buscar);
+
+  while($um_jogo = mysqli_fetch_assoc($todos_os_jogos)):
     ?>
+    <div class="col-md-3 text-center mb-4">
+    <img src="<?php echo $um_jogo["foto"];?>" class="img-fluid">
+    <h5 class="mt-3 mb-3"><?php echo $um_jogo["titulo"];?></h5>
+    <a href="<?php echo $um_jogo["video"];?>" class="btn btn-outline-primary">VER MAIS!</a>
+  </div>
+ 
+ <?php
+  endwhile;
+  ?>
 
   </div>
   <div class="row mt-5">
