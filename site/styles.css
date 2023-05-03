@@ -1,12 +1,20 @@
 .FPS {
-    color: blue;
+    color: rgb(255, 0, 140);
 }
 
 .MOBA {
-    color: red;
+    color: rgb(0, 162, 255);
 
 }
 
 .Ação-Aventura{
-    color: purple;
+    color: red;
+}
+
+.Sobrevivência{
+    color: green;
+}
+
+.Battle.Royale{
+    color: rebeccapurple;
 }

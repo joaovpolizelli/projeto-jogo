@@ -59,19 +59,17 @@ include "menu.php";
         <h5 class="mt-3 mb-3"><?php echo $um_jogo["titulo"]; ?></h5>
         <h6 class="mt-3 mb-3 <?php echo $um_jogo["categoria"]; ?>"><?php echo $um_jogo["categoria"]; ?></h6>
         <a href="<?php echo $um_jogo["video"]; ?>" class="btn btn-outline-primary">VER MAIS!</a>
-      </div>
-
-
+      </div> 
 
     <?php
     endwhile;
+    mysqli_close($conexao);
     ?>
-
 
   </div>
   <div class="row mt-5">
     <div class="col-12 text-center">
-      <h2>Entre em contato</h2>
+      <h2 class="mb-5">Entre em contato</h2>
     </div>
     <div clas="col-12 text-center">
       <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi ipsum, quibusdam libero explicabo facere dolor ducimus perferendis fuga. Quo molestias aliquid aperiam dolores fugit error soluta illum consectetur facere labore.</p>
