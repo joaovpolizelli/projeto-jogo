@@ -41,19 +41,17 @@ include "menu.php";
   <div class="row">
 
     <?php
-    $servidor_bd = "127.0.0.1";
-    $usuario_bd = "root";
-    $senha_bd = "";
-    $banco_de_dados = "delivery_jogos_novo";
 
-    $conexao = mysqli_connect($servidor_bd, $usuario_bd, $senha_bd, $banco_de_dados);
+   include "conexao.php";
 
     $sql_buscar = "select * from jogo";
 
     $todos_os_jogos = mysqli_query($conexao, $sql_buscar);
 
     while ($um_jogo = mysqli_fetch_assoc($todos_os_jogos)) :
+    
     ?>
+
       <div class="col-md-3 text-center mb-4">
         <img src="<?php echo $um_jogo["foto"]; ?>" class="img-fluid" style="object-fit: cover; height: 150px; width: 100%; object-position: top center;">
         <h5 class="mt-3 mb-3"><?php echo $um_jogo["titulo"]; ?></h5>
